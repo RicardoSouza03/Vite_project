@@ -89,24 +89,3 @@ export default function NewTask() {
         </section>
     )
 }
-
-{/* <Input 
-                type="text"
-                name="Nome"
-                onChange={(event) => setName(event.target.value)}
-                placeHolder="Dê um nome a atividade"
-                value={name}
-            />
-            <Input 
-                type="text"
-                name="Descrição"
-                onChange={(event) => setDescription(event.target.value)}
-                placeHolder="Descreva sua atividade"
-                value={description}
-            />
-            <Button 
-                onClick={() => createTask()}
-                disabled={false}
-                name="Criar"
-                type="button"
-            /> */}
