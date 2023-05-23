@@ -13,6 +13,7 @@ export default function NewTask() {
     const createTask = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault()
         const newTask: Task = {
+            id: new Date().getTime(),
             name: name as string,
             description: description as string,
             created: new Date().toLocaleDateString()
