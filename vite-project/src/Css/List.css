@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .list_main {
     display: flex;
     flex-flow: column nowrap;
@@ -48,7 +52,7 @@
 }
 
 .task_section {
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-radius: 2vh;
     padding: 1vh;
     text-align: left;
@@ -57,7 +61,7 @@
 .task_base_info {
     display: flex;
     flex-flow: row nowrap;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #000000;
     padding: 1.5vh;
     justify-content: space-between;
     align-items: center;
@@ -69,9 +73,20 @@
     margin: 0;
 }
 
-.task_section p {
+.task_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task_info p {
     padding: 1vh;
     font-size: large;
-    white-space: initial;
     word-wrap: break-word;
+    max-width: 60vh;
+}
+
+.task_info button {
+    background-color: #ff0000;
+    border: 1px solid black;
 }
