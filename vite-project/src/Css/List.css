@@ -1,0 +1,77 @@
+.list_main {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2vh;
+    border: 1px solid #000000;
+    color: #000000;
+    max-width: 80vh;
+    max-height: fit-content;
+    padding: 4vh 10vh;
+}
+
+.newTask_section {
+    border: 1px solid #000000;
+    border-radius: 2vh;
+    max-width: 80vh;
+}
+
+.newTask_section form {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1vh;
+    padding: 3vh;
+}
+
+.newTask_section fieldset {
+    font-weight: 645;
+    margin: 0;
+    padding: 0;
+    height: 12vh;
+    width: min-content;
+    border: none;
+}
+
+.newTask_section fieldset span {
+    padding: 0;
+}
+
+.newTask_section form input {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 1.5vh;
+    color: #000000;
+}
+
+.newTask_section form button {
+    padding: 2.3vh;
+}
+
+.task_section {
+    border: 1px solid black;
+    border-radius: 2vh;
+    padding: 1vh;
+    text-align: left;
+}
+
+.task_base_info {
+    display: flex;
+    flex-flow: row nowrap;
+    border-bottom: 1px solid black;
+    padding: 1.5vh;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 645;
+}
+
+.task_base_info h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.task_section p {
+    padding: 1vh;
+    font-size: large;
+    white-space: initial;
+    word-wrap: break-word;
+}

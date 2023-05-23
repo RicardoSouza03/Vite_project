@@ -4,11 +4,11 @@ import UserStore from "../zustand/UserStore/UserStore"
 import Button from "./Button"
 import { Form, Field } from "react-final-form";
 
+
 export default function NewTask() {
     const addTask = UserStore((state) => state.addTask)
     const [name, setName] = useState<string>('')
     const [description, setDescription] = useState<string>('')
-
 
     const createTask = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault()
@@ -32,22 +32,22 @@ export default function NewTask() {
         if (!description) {
             errors.description = 'Necessário'
         }
-        if (description && description.length < 4) {
+        if (description && description.length < 2) {
             errors.description = 'Muito curto'
         }
         return errors
     }
 
     return (
-        <section>
+        <section className="newTask_section">
             <Form 
                 onSubmit={createTask}
                 validate={validateForm}
-                render={({handleSubmit, submitting}) => (
+                render={({handleSubmit}) => (
                     <form onSubmit={handleSubmit}>
                         <Field name="name">
                             {({ input, meta }) => (
-                                <div>
+                                <fieldset>
                                     <label>Nome: </label>
                                     <input 
                                         type="text" 
@@ -58,12 +58,12 @@ export default function NewTask() {
                                         value={name}
                                     />
                                     { meta.touched && meta.error && <span>{meta.error}</span> }
-                                </div>
+                                </fieldset>
                             )}
                         </Field>
                         <Field name="description">
                             {({ input, meta }) => (
-                                <div>
+                                <fieldset>
                                     <label>Descrição: </label>
                                     <input 
                                         type="text" 
@@ -74,11 +74,11 @@ export default function NewTask() {
                                         value={description}
                                     />
                                     { meta.touched && meta.error && <span>{meta.error}</span> }
-                                </div>
+                                </fieldset>
                             )}
                         </Field>
                         <Button 
-                            disabled={submitting}
+                            disabled={!name || !description}
                             name="Adicionar"
                             onClick={(event) => createTask(event)}
                             type="submit"
