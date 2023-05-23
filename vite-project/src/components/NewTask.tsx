@@ -24,11 +24,8 @@ export default function NewTask() {
 
     const validateForm = () => {
         const errors = {name: '', description: ''}
-        if (!name) {
-            errors.name = 'Necessário'
-        }
         if (name.length < 1) {
-            errors.name = 'Muito curto'
+            errors.name = 'Necessário'
         }
         if (!description) {
             errors.description = 'Necessário'
@@ -49,7 +46,7 @@ export default function NewTask() {
                         <Field name="name">
                             {({ input, meta }) => (
                                 <fieldset>
-                                    <label>Nome: </label>
+                                    <label htmlFor="name">Nome: </label>
                                     <input 
                                         type="text" 
                                         {...input}
@@ -57,6 +54,8 @@ export default function NewTask() {
                                         name="name"
                                         onChange={(event) => setName(event.target.value)}
                                         value={name}
+                                        autoComplete="off"
+                                        id="name"
                                     />
                                     { meta.touched && meta.error && <span>{meta.error}</span> }
                                 </fieldset>
@@ -65,7 +64,7 @@ export default function NewTask() {
                         <Field name="description">
                             {({ input, meta }) => (
                                 <fieldset>
-                                    <label>Descrição: </label>
+                                    <label htmlFor="description">Descrição: </label>
                                     <input 
                                         type="text" 
                                         {...input}
@@ -73,6 +72,8 @@ export default function NewTask() {
                                         name="description"
                                         onChange={(event) => setDescription(event.target.value)}
                                         value={description}
+                                        autoComplete="off"
+                                        id="description"
                                     />
                                     { meta.touched && meta.error && <span>{meta.error}</span> }
                                 </fieldset>

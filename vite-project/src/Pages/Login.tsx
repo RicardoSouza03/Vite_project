@@ -35,7 +35,7 @@ export default function Login() {
             <Form 
                 onSubmit={submitHandler}
                 validate={validateForm}
-                render={({handleSubmit, submitting}) => (
+                render={({handleSubmit}) => (
                     <form onSubmit={handleSubmit}>
                         <Field name="email">
                             {({ input, meta }) => (
@@ -48,6 +48,7 @@ export default function Login() {
                                         type="text"
                                         value={email}
                                         id="email"
+                                        autoComplete="off"
                                         />
                                     { meta.touched && meta.error && <span>{meta.error}</span> }
                                 </fieldset>
@@ -56,20 +57,22 @@ export default function Login() {
                         <Field name="password">
                             {({ input, meta }) => (
                                 <fieldset>
-                                    <label>Senha: </label>
+                                    <label htmlFor="password">Senha: </label>
                                     <input
                                         type="password"
                                         {...input}
                                         placeholder="Senha"
                                         onChange={(event) => setPassword(event.target.value)}
                                         value={password}
+                                        autoComplete="off"
+                                        id="password"
                                         />
                                     { meta.touched && meta.error && <span>{meta.error}</span> }
                                 </fieldset>
                             )}
                         </Field>
                         <Button 
-                            disabled={submitting}
+                            disabled={!email || !password}
                             name="Entrar"
                             onClick={(event) => submitHandler(event)}
                             type="submit"
