@@ -1,0 +1,43 @@
+.login_main {
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 5vh;
+    max-width: 50vh;
+    max-height: 50vh;
+    border: 1px solid #000000;
+    border-radius: 2vh;
+}
+
+.login_main h2 {
+    color: #000000;
+    margin: 0;
+    text-align: left;
+}
+
+.login_main form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.login_main fieldset {
+    display: flex;
+    flex-flow: column;
+    background-color: #ffffff;
+    color: #000000;
+    align-items: baseline;
+    font-weight: 645;
+    border: none;
+}
+
+.login_main fieldset span {
+    color: #ff0000;
+}
+
+.login_main fieldset input {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 1.5vh;
+    color: #000000;
+}
