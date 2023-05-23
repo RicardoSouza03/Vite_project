@@ -8,6 +8,7 @@ interface UserStore extends User {
     setEmail: (email: string) => void,
     setPassword: (password: string) => void,
     addTask: (task: Task) => void,
+    removeTask: (taskId: number) => void
 }
 
 const UserStore = create<UserStore>()(
@@ -22,6 +23,7 @@ const UserStore = create<UserStore>()(
                 setEmail: (email: string) => set(() => ({ email: email })),
                 setPassword: (password: string) => set(() => ({ password: password })),
                 addTask: (task: Task) => set((state) => ({ tasks: [...state.tasks, task] })),
+                removeTask: (taskId: number) => set((state) => ({tasks: state.tasks.filter(({ id }) => id !== taskId)}))
             }),
             {
                 name: 'userStore'
