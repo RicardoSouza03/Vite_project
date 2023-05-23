@@ -2,10 +2,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-body {
-    align-items: start;
-}
-
 .list_main {
     display: flex;
     flex-flow: column nowrap;
@@ -29,14 +25,14 @@ body {
     flex-flow: row nowrap;
     align-items: center;
     gap: 1vh;
-    padding: 3vh;
+    padding: 3.8vh;
 }
 
 .newTask_section fieldset {
     font-weight: 645;
     margin: 0;
     padding: 0;
-    height: 12vh;
+    height: 9vh;
     width: min-content;
     border: none;
 }
@@ -46,14 +42,19 @@ body {
 }
 
 .newTask_section form input {
-    padding: 10px;
-    background-color: #ffffff;
+    padding: 1.5vh;
     border-radius: 1.5vh;
-    color: #000000;
+    color: #ffffff;
 }
 
 .newTask_section form button {
-    padding: 2.3vh;
+    padding: 1.5vh;
+    align-self: flex-start;
+    margin-top: 25px;
+}
+
+.newTask_section form span {
+    color: #ff0000;
 }
 
 .task_section {

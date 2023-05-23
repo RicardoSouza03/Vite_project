@@ -1,8 +1,15 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .login_main {
     background-color: #ffffff;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    justify-content: center;
     padding: 5vh;
     max-width: 50vh;
     max-height: 50vh;
@@ -37,7 +44,6 @@
 
 .login_main fieldset input {
     padding: 10px;
-    background-color: #ffffff;
     border-radius: 1.5vh;
-    color: #000000;
+    color: #ffffff;
 }
